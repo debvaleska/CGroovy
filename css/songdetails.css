@@ -1,0 +1,345 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #2F0372;
+    color: #ffffff;
+  }
+
+header {
+  background-color: #2F0372;
+  color: white;
+  font-size: 40px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+.listening{
+  margin-bottom: 10px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c0242;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container { 
+  position: relative;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1c0242;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.dropdown a:hover {
+  color: #FA7903;
+  background-color: #080014;
+}
+
+.logo-container:hover .dropdown {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FA7903;
+  cursor: pointer;
+}
+
+nav .register-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+  .register-icon img :hover {
+    transform: scale(1.1);
+    filter: brightness(10%);
+    cursor: pointer;
+  }
+
+.song-detail-layout {
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    padding: 40px 20px; 
+    gap: 40px;
+    min-height: calc(100vh - 150px); 
+}
+
+.song-info-section {
+    flex: 1; 
+    max-width: 400px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #1c0242;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.song-cover img {
+    width: 100%; 
+    max-width: 250px; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+}
+
+
+.song-details-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.song-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #FA7903;
+    margin-bottom: 5px;
+}
+
+.song-artist {
+    font-size: 1.2em;
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.audio-player-container {
+    width: 100%;
+    max-width: 300px;
+    background-color: transparent;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.audio-player-container .progress-area {
+    height: 8px;
+    width: 90%;
+    background: #555;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.audio-player-container .progress-bar {
+    height: 100%;
+    width: 0%; 
+    background: #FA7903;
+    border-radius: 5px;
+}
+
+.audio-player-container .current-time,
+.audio-player-container .total-time {
+    font-size: 0.8em;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.audio-player-container .current-time {
+    position: absolute;
+    left: 0;
+    top: -20px; 
+}
+
+.audio-player-container .total-time {
+    position: absolute;
+    right: 0;
+    top: -20px; 
+}
+
+.audio-player-container .btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.audio-player-container .btns button {
+    all: unset;
+    height: 50px;
+    width: 50px;
+    background-color: #FA7903;
+    border-radius: 50%; 
+    color: #1c0242;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.audio-player-container .btns button:hover {
+    background-color: #e66a00;
+    transform: scale(1.05);
+}
+
+.audio-player-container .btns button.play {
+    background-color: #03FA79; 
+    color: #1c0242;
+    font-size: 2em;
+}
+
+.audio-player-container .btns button.play:hover {
+    background-color: #02e66f;
+}
+
+
+.lyrics-section {
+    flex: 2;
+    background-color: #1c0242;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lyrics-container {
+    flex: 1;
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 15px;
+    margin-bottom: 20px;
+    scrollbar-width: thin; 
+    scrollbar-color: #FA7903 #080014; 
+}
+
+
+.lyrics-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.lyrics-container::-webkit-scrollbar-track {
+    background: #080014;
+    border-radius: 10px;
+}
+
+.lyrics-container::-webkit-scrollbar-thumb {
+    background-color: #FA7903;
+    border-radius: 10px;
+    border: 2px solid #080014;
+}
+
+.lyrics-container p {
+    line-height: 1.8;
+    white-space: pre-line;
+    color: #e0e0e0;
+}
+
+.short-desc {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.short-desc h4 {
+    font-size: 1.2em;
+    color: #FA7903;
+    margin-bottom: 10px;
+}
+
+.short-desc p {
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container { 
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    height: auto;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+.container .music-img-box,
+.container .music-details,
+.container .btns-box {
+    position: static; 
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.container .btns-box .btns button:nth-child(1),
+.container .btns-box .btns button:nth-child(3){
+    background:none; 
+    color: inherit; 
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1c0242;
+  color: white;
+}
+
+@media (max-width: 768px) {
+    nav ul,
+    nav .register-icon {
+      display: none;
+    }
+  }
+

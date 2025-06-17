@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Collection</title>
+    <link rel="stylesheet" href="css/songcollectionstyle.css">
+</head>
+<body>
+   <nav>
+        <div class="logo-container">
+            <div class="logo">C'Groovy</div>
+            <div class="dropdown">
+              <a href="index.html">Home</a>
+              <a href="aboutus.html">About Us</a>
+              <a href="songcollection.html">Song Collection</a>
+              <a href="songdetails.html">Songs Detail</a>
+              <a href="regis.html">Register</a>
+            </div>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="songcollection.html">Song Collection</a></li>
+            <li><a href="songdetails.html">Songs Detail</a></li>
+        </ul>
+        <div class="register-icon">
+            <a href="regis.html">
+                <img src="asset/icon register.png" alt="">
+            </a>
+        </div>
+    </nav>
+
+    <div class="banner">
+        <img src="asset/ben-blennerhassett-LR5eS1C9IUU-unsplash.jpg" alt="">
+        <div class="banner-text">
+            <h1>
+                Song Collection
+            </h1>
+            <p id="first-line">
+            Just a sneak peek—Pop, R&B, K-Pop, and more. 
+            </p>
+            <p>
+            Explore the vibe, discover the hits, and see what C'Groovy is all about.
+            To explore more, register now!
+            </p>
+        </div>
+      </div>
+
+      <main class="container">
+            <section class="list-genre">
+                <h1 id="heading-genre">
+                    Explore by Genre
+                </h1>
+            <div class="container-genre-card">
+                 <div class="genre-card">
+                    <h2>
+                        K-Pop
+                    </h2>
+                </div>
+                <div class="genre-card">
+                    <h2>
+                        Pop
+                    </h2>
+                </div>
+                <div class="genre-card">
+                    <h2>
+                        R&B
+                    </h2>
+                </div>
+                 
+            </div>    
+            </section>
+
+
+<!-- KPOP -->
+    <section class="list-songs">
+        
+        <h1 id="heading-song">Top K-Pop Songs</h1>
+
+    <div class="carousel-container">
+    
+        <div class="carousel" id="carousel-kpop">
+        <div class="song-card active">
+            <img src="asset/BTS - Butter.jpeg" alt="Butter">
+            <div class="songcard-text">
+                <h3>Butter</h3>
+                <h4>BTS</h4>
+                <p>A catchy and charismatic hit with smooth vocals and funky energy.</p>
+                <button class="detail-button">See Detail</button>
+            </div>
+        </div>
+
+        <div class="song-card">
+            <img src="asset/BLACKPINK - Pink Venom.jpg" alt="Pink Venom">
+            <div class="songcard-text">
+            <h3>Pink venom</h3>
+            <h4>BLACKPINK</h4>
+            <p>A fierce and genre-blending anthem with bold rap and attitude.</p>
+            <button class="detail-button" id="detailBtn">See Detail</button>
+            </div>
+        </div>
+
+        <div class="song-card">
+            <img src="asset/NewJeans - Ditto.jpeg" alt="Ditto">
+            <div class="songcard-text">
+            <h3>Ditto</h3>
+            <h4>New Jeans</h4>
+            <p>A dreamy, sentimental track blending soft beats with youthful vocals.</p>
+            <button class="detail-button">See Detail</button>
+            </div>
+        </div>
+        
+        </div>
+
+
+        <div class="song-buttons">
+        <button class="prevBtn" data-carousel="carousel-kpop">&#10094;</button>
+        <button class="nextBtn" data-carousel="carousel-kpop">&#10095;</button>
+        </div>
+        
+    </div>
+    </section> 
+
+<!-- POP -->
+            <section class="list-songs">
+            <h1 id="heading-song">Top Pop Songs</h1>
+
+  <div class="carousel-container">
+   
+
+    <div class="carousel" id="carousel-pop">
+      <div class="song-card active">
+        <img src="asset/As it was - harry styles.png" alt="As It Was">
+        <div class="songcard-text">
+            <h3>As It Was</h3>
+            <h4>Harry Styles</h4>
+            <p>A reflective synth-pop track.</p>
+            <button class="detail-button">See Detail</button>
+        </div>
+      </div>
+      <div class="song-card">
+        <img src="asset/Dua Lipa - Levitating.jpg" alt="Levitating">
+        <div class="songcard-text">
+          <h3>Levitating</h3>
+          <h4>Dua Lipa</h4>
+          <p>A disco-pop track bursting with energy, charm, and retro vibes.</p>
+          <button class="detail-button">See Detail</button>
+        </div>
+      </div>
+      <div class="song-card">
+        <img src="asset/Olivia Rodrigo - Vampire.jpg" alt="Vampire">
+        <div class="songcard-text">
+          <h3>Vampire</h3>
+          <h4>Olivia Rodrigo</h4>
+          <p>A bold, emotional song blending pop drama with personal storytelling.</p>
+          <button class="detail-button">See Detail</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="song-buttons">
+    <button class="prevBtn" data-carousel="carousel-pop">&#10094;</button>
+    <button class="nextBtn" data-carousel="carousel-pop">&#10095;</button>
+    </div>
+    
+  </div>
+</section>
+
+    <!-- R&B -->
+
+     <section class="list-songs">
+        
+        <h1 id="heading-song">Top R&B Songs</h1>
+
+    <div class="carousel-container">
+    
+        <div class="carousel" id="carousel-rnb">
+        <div class="song-card active">
+            <img src="asset/SZA - Snooze.jpeg" alt="snooze">
+            <div class="songcard-text">
+                <h3>Snooze</h3>
+                <h4>SZA</h4>
+                <p>A laid-back, sultry track that explores love and longing with dreamy vocals.</p>
+                <button class="detail-button">See Detail</button>
+            </div>
+        </div>
+        <div class="song-card">
+            <img src="asset/The Weeknd - Die For You.jpeg" alt="die for you">
+            <div class="songcard-text">
+            <h3>Die For You</h3>
+            <h4>The Weeknd</h4>
+            <p>A heartfelt R&B ballad with 80s influences and raw emotion.</p>
+            <button class="detail-button">See Detail</button>
+            </div>
+        </div>
+        <div class="song-card">
+            <img src="asset/Doja Cat ft. Nicki Minaj - Say So.jpeg" alt="say so">
+            <div class="songcard-text">
+            <h3>Say So</h3>
+            <h4>Doja Cat</h4>
+            <p>A smooth blend of R&B and disco, with flirtatious vibes and retro flair.</p>
+            <button class="detail-button">See Detail</button>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="song-buttons">
+        <button class="prevBtn" data-carousel="carousel-rnb">&#10094;</button>
+        <button class="nextBtn" data-carousel="carousel-rnb">&#10095;</button>
+        </div>
+        
+    </div>
+    </section> 
+
+      </main>
+
+    <footer>
+        <p>&reg; 2025 All copyrights to C'Groovy</p>
+    </footer>
+     
+     <script src="js/songcollection.js"></script>
+
+</body>
+</html>

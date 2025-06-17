@@ -1,0 +1,522 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2F0372;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1c0242;
+  width: 100%;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+  }
+
+.logo-container { 
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1c0242;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.dropdown a:hover {
+  color: #FA7903;
+  background-color: #080014;
+}
+
+.logo-container:hover .dropdown {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FA7903;
+  cursor: pointer;
+}
+
+nav .register-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.register-icon img :hover {
+  transform: scale(1.1);
+  filter: brightness(10%);
+  cursor: pointer;
+}
+
+.registration-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
+    color: #1c0242;
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-bottom: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+input[
+    type="text"
+    ],
+input[
+    type="email"
+    ],
+input[
+    type="password"
+    ],
+input[
+    type="number"
+    ],
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #5A0A9C;
+    border-radius: 8px;
+    background-color: #1c02427d;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[
+    type="text"
+    ]:focus,
+input[
+    type="email"
+    ]:focus,
+input[
+    type="password"
+    ]:focus,
+input[
+    type="number"
+    ]:focus,
+
+select:focus {
+    border-color: #FA7903;
+    background-color: #1c0242;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+select option {
+    background-color: #2F0372;
+    color: white;
+}
+
+.error-message {
+    color: #FFD700;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #FA7903;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+.submit-button:hover {
+    background-color: #E66A00;
+    transform: translateY(-2px);
+}
+
+.message-box {
+    background-color: rgba(250, 121, 3, 0.1);
+    color: #FA7903;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 25px;
+    text-align: center;
+    font-size: 16px;
+    display: none;
+    border: 1px solid #FA7903;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c0242;
+    color: white;
+    width: 100%;
+    
+  }
+
+  @media (max-width: 1024px) {
+    nav {
+        padding: 15px 20px;
+    }
+    .logo {
+        font-size: 22px;
+    }
+    .nav-links-desktop {
+        gap: 30px;
+    }
+    .registration-container {
+        max-width: 480px;
+        padding: 35px;
+        margin-top: 40px;
+    }
+    .registration-container h2 {
+        font-size: 30px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select {
+        padding: 11px;
+        font-size: 15px;
+    }
+    .submit-button {
+        padding: 14px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    nav {
+        padding: 15px;
+    }
+    .logo {
+        font-size: 22px;
+    }
+    .nav-links-desktop,
+    nav .register-icon {
+        display: none;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .dropdown {
+        width: 100%;
+        left: 0;
+        top: 100%;
+        border-radius: 0;
+    }
+    .dropdown a {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+    .registration-container {
+        max-width: 440px;
+        padding: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .registration-container h2 {
+        font-size: 28px;
+    }
+    label {
+        font-size: 15px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select {
+        padding: 10px;
+        font-size: 15px;
+    }
+    .error-message {
+        font-size: 13px;
+    }
+    .submit-button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    nav {
+        padding: 10px 15px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .main-content-wrapper{
+        padding: 15px;
+    }
+    .registration-container {
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: none;
+    }
+    .registration-container h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .error-message {
+        font-size: 12px;
+    }
+    .submit-button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul,
+    nav .register-icon {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    nav {
+        padding: 15px 20px;
+    }
+    .logo {
+        font-size: 22px;
+    }
+    .nav-links-desktop {
+        gap: 30px;
+    }
+    .registration-container {
+        max-width: 480px;
+        padding: 35px;
+        margin-top: 40px;
+    }
+    .registration-container h2 {
+        font-size: 30px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select {
+        padding: 11px;
+        font-size: 15px;
+    }
+    .submit-button {
+        padding: 14px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+    nav {
+        padding: 15px;
+    }
+    .logo {
+        font-size: 22px;
+    }
+    .nav-links-desktop,
+    nav .register-icon {
+        display: none;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .dropdown {
+        width: 100%;
+        left: 0;
+        top: 100%;
+        border-radius: 0;
+    }
+    .dropdown a {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+    .registration-container {
+        max-width: 440px;
+        padding: 30px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .registration-container h2 {
+        font-size: 28px;
+    }
+    label {
+        font-size: 15px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select {
+        padding: 10px;
+        font-size: 15px;
+    }
+    .error-message {
+        font-size: 13px;
+    }
+    .submit-button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    nav {
+        padding: 10px 15px;
+    }
+    .logo {
+        font-size: 20px;
+    }
+    .main-content-wrapper{
+        padding: 15px;
+    }
+    .registration-container {
+        width: 100%;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-width: none;
+    }
+    .registration-container h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    label {
+        font-size: 14px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .error-message {
+        font-size: 12px;
+    }
+    .submit-button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul,
+    nav .register-icon {
+      display: none;
+    }
+  }
